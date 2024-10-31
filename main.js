@@ -1,16 +1,15 @@
-let increase=document.getElementById("increase");
-let reset=document.getElementById("reset");
-let decrease=document.getElementById("decrease");
-let count=0;
-increase.onclick=function(){
-  count++;
-  document.getElementById("counter").textContent=count;
+let text;
+let number;
+let btn=document.getElementById("repeatbtn");
+let btn2=document.getElementById("clearbtn");  
+btn.onclick=function(){
+  text=document.getElementById("repeattext").value;
+  number=Number(document.getElementById("repeattime").value);
+  for(let i=0; i<=number; i++){
+    document.getElementById("output").innerHTML+=i +" " + text+"<br>";
 }
-reset.onclick=function(){
-  count=0;
-  document.getElementById("counter").textContent=count;
 }
-decrease.onclick=function(){
-  count--;
-  document.getElementById("counter").textContent=count;
+btn2.onclick=function(){
+  document.getElementById("output").textContent="";
 }
+
