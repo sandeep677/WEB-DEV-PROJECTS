@@ -1,0 +1,14 @@
+body {
+    font-size: 15pt;
+}
+#btn{
+  position:relative;
+  border-radius:8px;
+  height:60px;
+  width:180px;
+  left:70px;
+}
+#display{
+  font-size:30px;
+}
+  
