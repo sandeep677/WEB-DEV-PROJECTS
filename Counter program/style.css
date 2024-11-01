@@ -1,0 +1,28 @@
+h1{
+  text-align:center;
+  font-size: 100px;
+}
+button{
+  position:relative;
+}
+button:active{
+  background-color:blue;
+}
+#decrease{
+  height:50px;
+  width:100px;
+  border-radius:10px;
+  left:15px;
+}
+#reset{
+  height:50px;
+  width:100px;
+  border-radius:10px;
+  left:15px;
+}
+#increase{
+  height:50px;
+  width:100px;
+  border-radius:10px;
+  left:15px;
+}
