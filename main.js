@@ -1,20 +1,26 @@
-let button=document.getElementById("btn");
-let screen=document.getElementById("display");
-let quotes = [
-    "Believe you can and you're halfway there.",
-    "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-    "Don’t watch the clock; do what it does. Keep going.",
-    "The only way to do great work is to love what you do.",
-    "The harder you work for something, the greater you’ll feel when you achieve it.",
-    "Dream it. Wish it. Do it.",
-    "Success doesn’t just find you. You have to go out and get it.",
-    "Keep your face always toward the sunshine—and shadows will fall behind you.",
-    "It always seems impossible until it’s done.",
-    "Believe in yourself, take on your challenges, and dig deep within yourself to conquer fears."
+let chars = [
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
 ];
-
+let symbols = [
+    "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+",
+    "[", "]", "{", "}", ";", ":", "'", ",", ".", "<", ">", "/", "?", "|", "`", "~"
+];
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let passlength=15;
+let meter=document.getElementById("strength");
+let button=document.getElementById("btn");
 button.onclick=function(){
-  let rndnum=Math.round(Math.random() * 10);
-  let generatedquote=quotes[rndnum];
-  screen.textContent=generatedquote;
+  let password="";
+  for(let i=0; i<=5; i++){
+  let charsrnd=Math.round(Math.random()*51);
+  password+=chars[charsrnd];
+  let symbolsrnd=Math.round(Math.random()*29);
+  password+=symbols[symbolsrnd];
+  let numrnd=Math.round(Math.random()*8);
+  password+=num[numrnd];
+  
+}
+document.getElementById("display").textContent=password;
+meter.value=100;
 }
