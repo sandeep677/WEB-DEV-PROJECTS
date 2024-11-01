@@ -1,0 +1,14 @@
+body {
+    font-size: 15pt;
+}
+#strength,#strengthlbl{
+  position: relative;
+  left:60px;
+}
+#btn{
+  position:relative;
+  left:110px;
+  border-radius:8px;
+  height:55px;
+  width:110px;
+}
